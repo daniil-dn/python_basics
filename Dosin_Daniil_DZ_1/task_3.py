@@ -9,16 +9,18 @@
 # ...
 # 100 процентов
 
-a = "процент"
-b = "процента"
-c = "процентов"
-exceptins = [11, 12, 13, 14]
+def percent_to_string(num):
+    b = "а"
+    c = "ов"
+    if num in range(11, 15):
+        return f"{num} процент{c}"
+    elif num % 10 == 1:
+        return f"{num} процент"
+    elif 1 < num % 10 < 5:
+        return f"{num} процент{b}"
+    elif num > 4:
+        return f"{num} процент{c}"
+
+
 for n in range(1, 101):
-    if n % 10 == 1 and n != 11:
-        print(n, a)
-    elif n in exceptins:
-        print(n, c)
-    elif n % 10 > 1 and n % 10 < 5:
-        print(n, b)
-    elif n > 4:
-        print(n, c)
+    print(percent_to_string(n))
