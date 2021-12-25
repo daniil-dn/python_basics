@@ -25,9 +25,10 @@ def sum_div_7(in_list: list):
 
 
 def sum_div_7_plus_17(in_list: list):
-    in_list = [n + 17 for n in in_list]
+    # in_list = [n + 17 for n in in_list]
     res = 0
     for val in in_list:
+        val += 17
         sum = 0
         n = val
         while n > 0:
