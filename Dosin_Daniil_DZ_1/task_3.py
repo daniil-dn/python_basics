@@ -1,5 +1,6 @@
 # Склонение слова
-# Реализовать склонение слова «процент» во фразе «N процентов». Вывести эту фразу на экран отдельной строкой для каждого из чисел в интервале от 1 до 100:
+# Реализовать склонение слова «процент» во фразе «N процентов».
+#   Вывести эту фразу на экран отдельной строкой для каждого из чисел в интервале от 1 до 100:
 # 1 процент
 # 2 процента
 # 3 процента
@@ -9,18 +10,18 @@
 # ...
 # 100 процентов
 
-def percent_to_string(num):
+def transform_string(number: int) -> str:
     b = "а"
     c = "ов"
-    if num in range(11, 15):
-        return f"{num} процент{c}"
-    elif num % 10 == 1:
-        return f"{num} процент"
-    elif 1 < num % 10 < 5:
-        return f"{num} процент{b}"
-    elif num > 4:
-        return f"{num} процент{c}"
+    if number in range(11, 15):
+        return f"{number} процент{c}"
+    elif number % 10 == 1:
+        return f"{number} процент"
+    elif 1 < number % 10 < 5:
+        return f"{number} процент{b}"
+    elif number > 4:
+        return f"{number} процент{c}"
 
 
-for n in range(1, 101):
-    print(percent_to_string(n))
+for n in range(1, 101):  # по заданию учитываем только значения от 1 до 100
+    print(transform_string(n))
