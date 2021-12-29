@@ -3,6 +3,9 @@
 # и дополнить нулём до двух целочисленных разрядов
 # from io import StringIO
 
+import timeit
+import time
+
 
 # WORK IN PLACE
 def convert_list_in_str(list_in: list) -> str:
@@ -16,7 +19,7 @@ def convert_list_in_str(list_in: list) -> str:
     # ноль перед одностоящим числом
     for i in range(len(list_in)):
         element = list_in[i]
-        print(element)
+        # print(element)
         if element.strip('=+-;:"\'').isdigit():
             if not element[0].isdigit() and int(element.strip('=+-;:"\'')) < 10:
                 list_in[i] = '{}0{}'.format(element[0], int(element.strip('=+-;:"\'')))
@@ -38,6 +41,6 @@ def convert_list_in_str(list_in: list) -> str:
     return ''.join(str_out_list)
 
 
-my_list = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+50', 'градусов']
+my_list = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+5', 'градусов']
 result = convert_list_in_str(my_list)
 print(result)
