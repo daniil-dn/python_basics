@@ -11,11 +11,20 @@
 
 def convert_name_extract(list_in: list) -> list:
     """Извлекает имена из элементов и формирует список приветствий."""
-    list_out = ["Привет, {}!".format(name.split()[-1].title()) for name in list_in]  # extract names from list
-    return list_out
+    return ["Привет, {}!".format(name.split()[-1].title()) for name in list_in]
 
 
 input_names = ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАй',
                'директор аэлита']
 
 print(convert_name_extract(input_names))
+
+
+def convert_name_in_place(list_in: list) -> None:
+    for n in range(len(list_in)):
+        list_in[n] = "Привет, {}!".format(list_in[n].split()[-1].title())
+    return None
+
+
+convert_name_in_place(input_names)
+print(input_names)

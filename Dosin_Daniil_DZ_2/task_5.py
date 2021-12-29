@@ -46,7 +46,6 @@ def price_to_string(price):
 def transfer_list_in_str(list_in: list) -> str:
     """Преобразует каждый элемент списка (вещественное число) в строку вида '<r> руб <kk> коп' и
         формирует из них единую строковую переменную разделяя значения запятой."""
-
     str_out = ", ".join([price_to_string(price) for price in list_in])
     return str_out
 
@@ -60,7 +59,6 @@ print(result_1)
 
 def sort_prices(list_in: list) -> list:
     """Сортирует вещественные числа по возрастанию, не создавая нового списка"""
-    # пишите реализацию здесь
     list_in.sort()
     return list_in
 
@@ -73,8 +71,8 @@ print(result_2)
 
 def sort_price_adv(list_in: list) -> list:
     """Создаёт новый список и возвращает список с элементами по убыванию"""
-    # пишите реализацию здесь
-    list_out = ["список элементов в списке по убыванию"]
+    list_out = sorted(list_in)[::-1]
+    # list_out = list(reversed(sorted(list_in)))
     return list_out
 
 
@@ -85,9 +83,10 @@ print(result_3)
 def check_five_max_elements(list_in: list) -> list:
     """Проверяет элементы входного списка вещественных чисел и возвращает
         список из ПЯТИ максимальных значений"""
-    # пишите реализацию здесь
-    list_out = ["список из пяти самых больших элементов"]
-    return list_out
+    # reversed_prices = sorted(prices, reverse=True)
+    # # print(reversed_prices)
+    # print(*[price_to_string(reversed_prices[n]) for n in reversed(range(0, 5))])
+    return sorted(list_in)[len(list_in) - 5:len(list_in)]
 
 
 result_4 = check_five_max_elements(my_list)
