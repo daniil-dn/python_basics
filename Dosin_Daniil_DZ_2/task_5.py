@@ -12,11 +12,6 @@
 
 import random
 
-# prices = [random.randint(10, 10000) / 100 for price in range(20)]
-
-prices = [85.41, 91.07, 90.5, 13.79, 1.6, 66.88, 70.73, 68.9, 98.43, 76.43, 12.55, 76.88, 57.51, 78.09, 69.9, 12.56,
-          43.49, 5.2, 77.5, 72.95]
-
 # print(*[price_to_string(n) for n in prices])
 #
 # print(*[price_to_string(n) for n in sorted(prices)])  # функция sorted() не меняет список
@@ -45,7 +40,6 @@ def price_to_string(price):
 
     if int(whole_rub) < 10:
         whole_rub = f"0{int(whole_rub)}"
-    # print(whole_rub)
     return out_price_string.format(whole_rub, cent_rub)
 
 
@@ -57,8 +51,8 @@ def transfer_list_in_str(list_in: list) -> str:
     return str_out
 
 
-# my_list = [round(uniform(10, 1000), 2) for _ in range(1, 16)]  # автоматическая генерация случайных 15 чисел
-my_list = [10.1, 26.37, 26.01, 26.1, 100.1, 100.10, 0.12, 0.01, 10.0, 2]
+my_list = [round(uniform(10, 1000), 2) for _ in range(1, 16)]  # автоматическая генерация случайных 15 чисел
+# my_list = [10.1, 26.37, 26.01, 26.1, 100.1, 100.10, 0.12, 0.01, 10.0, 2]
 print(f'Исходный список: {my_list}')
 result_1 = transfer_list_in_str(my_list)
 print(result_1)
@@ -67,12 +61,13 @@ print(result_1)
 def sort_prices(list_in: list) -> list:
     """Сортирует вещественные числа по возрастанию, не создавая нового списка"""
     # пишите реализацию здесь
-    return ["отсортированный результирующий список"]
+    list_in.sort()
+    return list_in
 
 
-# зафиксируйте здесь информацию по исходному списку my_list
+print("id до сортировки:    ", id(my_list))
 result_2 = sort_prices(my_list)
-# зафиксируйте здесь доказательство, что результат result_2 остался тем же объектом
+print("id после сортировки: ", id(result_2))
 print(result_2)
 
 
