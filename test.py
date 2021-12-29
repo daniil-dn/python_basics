@@ -1,1 +1,1 @@
-isinstance()
+#2
