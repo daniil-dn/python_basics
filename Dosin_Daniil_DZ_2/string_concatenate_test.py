@@ -6,6 +6,7 @@
 import timeit
 import time
 
+
 # WORK IN PLACE
 def convert_list_in_str(list_in: list) -> str:
     """Обособляет каждое целое число кавычками, добавляя кавычку до и после элемента
@@ -75,15 +76,14 @@ def convert_list_in_str_concatenate(list_in: list) -> str:
     return str_out_list
 
 
-my_list = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+50', 'градусов']*2000
+my_list = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+50', 'градусов'] * 2000
 print("id before: ", id(my_list))
 start = time.time()
 result = convert_list_in_str(my_list)
 end = time.time()
 print(end - start)
 
-
-my_list = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+50', 'градусов']*2000
+my_list = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+50', 'градусов'] * 2000
 start = time.time()
 result_test = convert_list_in_str_concatenate(my_list)
 end = time.time()
