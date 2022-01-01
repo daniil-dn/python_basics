@@ -18,7 +18,12 @@
 from collections import OrderedDict
 
 
-def thesaurus(*args):
+def thesaurus(*args) -> dict:
+    """
+    make a dict from list of names and the keys are the first characters of the names
+    :param args: *names
+    :return: dict of names and keys are the first characters of the names
+    """
     names_dict = {}
     for name in args:
         name = name.capitalize()
