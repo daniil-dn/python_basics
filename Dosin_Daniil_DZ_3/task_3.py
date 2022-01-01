@@ -29,12 +29,19 @@ def thesaurus(*args):
     return names_dict
 
 
-print(thesaurus('name', 'ivan', "иван", 'inna'))
+print(thesaurus("Иван", "Мария", "Петр", "Илья"))
+
 names_gen = tuple(
-    "Random Names Sanjeev Oakley Alessandro Lyons Millie Callaghan Names Sanjeev Oakley Alessandro Lyons Millie CallaghanNames Sanjeev Oakley Alessandro Lyons Millie CallaghanNames Sanjeev Oakley Alessandro Lyons Millie CallaghanNames Sanjeev Oakley Alessandro Lyons Millie Callaghan Jake Curry Maaria Kirkland Jake Curry Maaria Kirkland Eliott Robins Jennie Neville Tiya Hood Andreas Goulding Buddy CantrellJake Curry Maaria Kirkland Eliott Robins Jennie Neville Tiya Hood Andreas Goulding Buddy CantrellJake Curry Maaria Kirkland Eliott Robins Jennie Neville Tiya Hood Andreas Goulding Buddy CantrellJake Curry Maaria Kirkland Eliott Robins Jennie Neville Tiya Hood Andreas Goulding Buddy CantrellJake Curry Maaria Kirkland Eliott Robins Jennie Neville Tiya Hood Andreas Goulding Buddy CantrellJake Curry Maaria Kirkland Eliott Robins Jennie Neville Tiya Hood Andreas Goulding Buddy Cantrell Eliott Robins Jennie Neville Tiya Hood Andreas Goulding Buddy Cantrell".split())
+    "Иван дмитрий сергей дарья алина алексей Random Names Sanjeev Oakley Alessandro lyons Millie Callaghan Names Sanjeev Oakley Alessandro".split())
 ready_name_dict = thesaurus(*names_gen)
+ready_name_dict_value_sorting = thesaurus(*names_gen)
 print(ready_name_dict)
 
 # sorting with ordereddict
-ready_name_dict = OrderedDict(sorted(ready_name_dict.items()))
-print(dict(ready_name_dict))
+ready_name_dict = dict(OrderedDict(sorted(ready_name_dict.items())))
+# sorting by keys with usual dict
+ready_name_dict_value_sorting = dict(ready_name_dict.items(), key=lambda item: item[0])
+ready_name_dict_value_sorting.popitem()  # remove lambda hash from dict
+
+print(ready_name_dict)
+print(ready_name_dict_value_sorting)
