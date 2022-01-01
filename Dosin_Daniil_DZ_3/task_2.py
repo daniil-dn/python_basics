@@ -39,7 +39,6 @@ def num_translate_adv(value: str) -> str:
 print(num_translate_adv("One"))
 print(num_translate_adv("Eight"))
 
-
 # TESTING
 nums_dictionary_ru_en = {'один': "one", "два": "two", "три": "three", "четыре": "four", "пять": "five",
                          "шесть": "six",
