@@ -20,5 +20,42 @@
 # }
 #
 # Как поступить, если потребуется сортировка по ключам?
+from collections import OrderedDict
 
 
+def thesaurus_adv(*args: str) -> dict:
+    """
+    make a dict from list of names and the keys are the first characters of the names
+    :param **kwargs: **{names and forenames}
+    :return: dict of names and forenames - keys are the first characters of the names
+    """
+    dict_out = {}
+    for name_forename_str in args:
+        name_forename_str = name_forename_str.title()
+        try:
+            forename_char = name_forename_str[name_forename_str.find(' ') + 1]
+        except IndexError as er:
+            print(er, '\n there is not forename')
+            break
+        name_char = name_forename_str[0]
+        forname_dict = dict_out.get(forename_char)
+        list_names = [] if forname_dict is None else forname_dict.get(name_char)
+
+        if forname_dict is None:
+            forname_dict = {name_char: [name_forename_str]}
+        else:
+            if list_names is not None:
+                forname_dict.get(name_char).append(name_forename_str)
+            else:
+                list_names = [name_forename_str]
+                forname_dict.setdefault(name_char, list_names)
+
+        dict_out.setdefault(forename_char, forname_dict)
+        forname_dict = dict_out.get(forename_char)
+
+    return dict_out
+
+
+# { "А": {  "П": ["Петр Алексеев"] }}
+
+thesaurus_adv("Иваnн Сергеев", "Инна Серова", "Петр Алексеев", "Илья ", "Анна Савельева", )

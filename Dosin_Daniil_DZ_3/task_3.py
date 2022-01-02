@@ -27,10 +27,11 @@ def thesaurus(*args) -> dict:
     names_dict = {}
     for name in args:
         name = name.capitalize()
-        if names_dict.get(name[0]):
-            names_dict[name[0]].append(name)
+        first_char = name[0]
+        if names_dict.get(first_char):
+            names_dict[first_char].append(name)
         else:
-            names_dict.setdefault(name[0], [name])
+            names_dict.setdefault(first_char, [name])
     return names_dict
 
 
