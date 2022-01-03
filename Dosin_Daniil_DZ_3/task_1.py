@@ -19,7 +19,10 @@ def num_translate(value: str) -> str:
     nums_dictionary_ru_en = {'один': "one", "два": "two", "три": "three", "четыре": "four", "пять": "five",
                              "шесть": "six",
                              "семь": "seven", "восемь": "eight", "девять": "nine", "десять": "ten"}
-    nums_dictionary_en_ru = {e: r for r, e in nums_dictionary_ru_en.items()}
+    nums_dictionary_en_ru = {}  # {e: r for r, e in nums_dictionary_ru_en.items()}
+    for r, e in nums_dictionary_ru_en.items():
+        nums_dictionary_en_ru.update({e: r})
+
     if value in nums_dictionary_ru_en.keys():
         str_out = nums_dictionary_ru_en.get(value)
     elif value in nums_dictionary_en_ru.keys():
