@@ -21,14 +21,14 @@ def num_translate_adv(value: str) -> str:
                              "шесть": "six",
                              "семь": "seven", "восемь": "eight", "девять": "nine", "десять": "ten"}
     nums_dictionary_en_ru = {e: r for r, e in nums_dictionary_ru_en.items()}
-    isCapital = not value.islower()
+    is_capital = not value.islower()
     value = value.lower()
     if value in nums_dictionary_ru_en.keys():
         str_out = nums_dictionary_ru_en.get(value)
-        str_out = str_out.capitalize() if isCapital else str_out
+        str_out = str_out.capitalize() if is_capital else str_out
     elif value in nums_dictionary_en_ru.keys():
         str_out = nums_dictionary_en_ru.get(value)
-        str_out = str_out.capitalize() if isCapital else str_out
+        str_out = str_out.capitalize() if is_capital else str_out
 
     else:
         return None
