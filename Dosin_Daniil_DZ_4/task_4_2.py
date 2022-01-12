@@ -3,13 +3,10 @@ import re
 from decimal import Decimal
 
 
-def currency_rates(code: str) -> Decimal:
+def currency_rates(code: str) -> Decimal|None:
     """возвращает курс валюты `code` по отношению к рублю"""
-    response = requests.get('https://www.cbr.ru/scripts/XML_daily.asp')
-    print(response.text)
-    response = response.text
+    response = requests.get('https://www.cbr.ru/scripts/XML_daily.asp').text
     code_ind = response.find(code.upper())
-    print(code_ind)
     if code_ind == -1:
         return None
     else:
