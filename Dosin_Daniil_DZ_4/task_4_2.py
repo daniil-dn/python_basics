@@ -24,3 +24,5 @@ def currency_rates(code: str) -> Decimal:
 
 
 print(currency_rates("AuD"))
+print(currency_rates("euro"))
+print(currency_rates("uSd"))
