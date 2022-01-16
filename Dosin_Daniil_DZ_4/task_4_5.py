@@ -8,6 +8,8 @@ import datetime
 
 
 def currency_rates_adv(code: str) -> tuple | None:
+    if code is None:
+        return None
     """возвращает курс валюты `code` по отношению к рублю"""
     time_start = time.perf_counter()
     response = requests.get('https://www.cbr.ru/scripts/XML_daily.asp').text
@@ -34,6 +36,7 @@ def currency_rates_adv(code: str) -> tuple | None:
 
 
 program, *code = sys.argv
+code = [None] if code == [] else code
 currency_rate = currency_rates_adv(code[0])
 if not currency_rate is None:
     print(*currency_rate)
