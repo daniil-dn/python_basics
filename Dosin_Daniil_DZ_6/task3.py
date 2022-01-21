@@ -41,10 +41,10 @@ def prepare_dataset(path_users_file: str, path_hobby_file: str) -> dict:
         elif not hobby_line:
             result_dict.setdefault(user_line, None)
             continue
-        hobby_line_list = hobby_line.split(',')
-        result_dict.setdefault(user_line, hobby_line_list)
+        hobby_line_list = [hobby.strip('\n') for hobby in hobby_line.split(',')]
+        result_dict.setdefault(user_line.strip('\n').replace(',', ' '), hobby_line_list)
 
-    return result_dict # верните словарь, либо завершите исполнение программы кодом 1
+    return result_dict  # верните словарь, либо завершите исполнение программы кодом 1
 
 
 dict_out = prepare_dataset('users.csv', 'hobby.csv')
