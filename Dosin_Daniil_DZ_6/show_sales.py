@@ -14,7 +14,12 @@ def get_all_file_lines_generator(path):
                 yield line.strip()
 
 
-def get_all_file_lines(path):
+def get_all_file_lines(path: str) -> list:
+    """
+    get all file lines and return list with data
+    :param path: string with path to existed file
+    :return: list
+    """
     with open(path, 'r', encoding='utf-8') as fr:
         list_out = list()
         while True:
@@ -26,10 +31,12 @@ def get_all_file_lines(path):
     return list_out
 
 
+# head-on solution
 def get_file_lines_from(from_pos, path):
     list_in = get_all_file_lines(path)
     res_from = list_in[from_pos - 1:]
     return res_from
+
 
 
 if __name__ == "__main__":
