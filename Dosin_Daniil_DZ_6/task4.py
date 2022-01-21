@@ -9,7 +9,14 @@
 Если в файле, хранящем данные о хобби, меньше записей, чем в файле с ФИО, задаём в словаре значение None.
 Если наоборот — выходим из скрипта с кодом 1.
 
+Решить задачу 3 для ситуации, когда объём данных в файлах превышает объём ОЗУ
+(разумеется, не нужно реально создавать такие большие файлы, это просто задел на будущее проекта).
+Только теперь не нужно создавать словарь с данными. Вместо этого нужно сохранить объединенные данные в новый файл users_hobby.txt.
 
+Хобби пишем через двоеточие и пробел после ФИО:
+
+Иванов,Иван,Иванович: скалолазание,охота
+Петров,Петр,Петрович: горные лыжи
 """
 
 import sys
@@ -49,6 +56,28 @@ def prepare_dataset(path_users_file: str, path_hobby_file: str) -> dict:
     return result_dict  # верните словарь, либо завершите исполнение программы кодом 1
 
 
+def dataset_to_file(data_dict: dict, path: str) -> bool:
+    """
+    dict {'Иванов Иван Иванович': ['скалолазание', 'охота'],} to file like Иванов,Иван,Иванович: скалолазание,охота
+    :param data_dict: seriolize dict to file
+    :param path: path to file
+    :return: True after closing file
+    """
+    with open(path, 'w', encoding='utf-8') as fw:
+        for k, v in data_dict.items():
+            full_name = k.replace(' ', ',')
+            if v is None:
+                hobby = ''
+            else:
+                hobby = ','.join(v)
+
+            line_name_hobby = f'{full_name}: {hobby}\n'  # Иванов,Иван,Иванович: скалолазание,охота
+            fw.write(line_name_hobby)
+    return True
+
+
 dict_out = prepare_dataset('users.csv', 'hobby.csv')
+# print(dict_out)
+dataset_to_file(dict_out, "users_hobby.txt")
 with open('task_6_3_result.json', 'w', encoding='utf-8') as fw:
     json.dump(dict_out, fw, ensure_ascii=False, indent=2)
