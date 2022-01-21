@@ -38,6 +38,12 @@ def get_file_lines_from(from_pos, path):
     return res_from
 
 
+# head-on solution
+def get_file_lines_from_end(from_pos, end_pos, path):
+    list_in = get_all_file_lines(path)
+    res_from = list_in[from_pos - 1:end_pos]
+    return res_from
+
 
 if __name__ == "__main__":
     f_name, *args = sys.argv
@@ -46,7 +52,7 @@ if __name__ == "__main__":
     elif len(args) == 1 and args[0].isdigit():
         print(get_file_lines_from(int(args[0]), PATH_FILE))
     elif len(args) == 2 and args[0].isdigit() and args[1].isdigit():
-        pass
+        print(get_file_lines_from_end(int(args[0]), int(args[1]), PATH_FILE))
 
         # start_1 = perf_counter()
         # print(*get_all_file_lines_generator(PATH_FILE), sep='\n')
