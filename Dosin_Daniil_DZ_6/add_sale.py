@@ -1,3 +1,4 @@
+import random
 import sys
 
 
@@ -6,7 +7,9 @@ def add_note(note, path):
         fa.write(f'{note}\n')
 
 
-file_name, *args = sys.argv
-file_path = "bakery.csv"
-if args and args[0].replace(',', '').isdigit():
-    add_note(args[0], file_path)
+PATH_FILE = "bakery.csv"
+if __name__ == "__main__":
+    f_name, *args = sys.argv
+
+    if args and args[0].replace(',', '').isdigit():
+        add_note(args[0], PATH_FILE)
