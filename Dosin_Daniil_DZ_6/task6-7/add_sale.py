@@ -3,7 +3,8 @@ import sys
 
 
 def add_note(note, path):
-    note = note.replace(',', '.')
+    note = note.replace(',', '.').ljust(10)
+
     with open(path, 'a+', encoding='utf-8') as fa:
         fa.write(f'{note}\n')
 
@@ -15,4 +16,4 @@ if __name__ == "__main__":
     if args and args[0].replace(',', '').isdigit():
         add_note(args[0], PATH_FILE)
     else:
-        raise ValueError("Ожидалась <цена>, например 129,2")
+        raise ValueError("<цена>, например 129,2")

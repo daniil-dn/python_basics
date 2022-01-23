@@ -33,7 +33,7 @@ with open('qwerty_2.txt', 'a+', encoding='utf-8') as fw:
 import random
 
 task = [f'{random.randrange(1, 10)} {random.randrange(1, 10)}\n' for _ in range(10)]
-with open('trash/summator.txt', 'w', encoding='utf-8') as f:
+with open('../trash/summator.txt', 'w', encoding='utf-8') as f:
     f.writelines(task)
 
 
@@ -43,17 +43,17 @@ def send_sum(val_1: int, val_2: int) -> int:
 
 
 res = 0
-with open('trash/summator.txt', 'r', encoding='utf-8') as fr:
+with open('../trash/summator.txt', 'r', encoding='utf-8') as fr:
     for row in fr.readlines():
         v1, v2 = row.split(' ')
         res = send_sum(*map(int, [v1, v2]))
 print(res)
-with open('trash/summator.txt', 'r', encoding='utf-8') as fr:
+with open('../trash/summator.txt', 'r', encoding='utf-8') as fr:
     for row in fr:
         v1, v2 = row.split(' ')
         res = send_sum(*map(int, [v1, v2]))
 print(res)
-with open('trash/summator.txt', 'r', encoding='utf-8') as fr:
+with open('../trash/summator.txt', 'r', encoding='utf-8') as fr:
     while True:
         row = fr.readline()
         if not row:
@@ -72,10 +72,10 @@ my_dataset: list = [
     {'name': "анатолий", 'level': 49},
     {'name': "светала", 'level': 69}
 ]
-with open('trash/tasks_json.json', 'w', encoding='utf-8') as f:
+with open('../trash/tasks_json.json', 'w', encoding='utf-8') as f:
     data_str = json.dumps(my_dataset, ensure_ascii=False, indent=4)
     f.write(data_str)
-with open('trash/tasks_json.json', 'r', encoding='utf-8') as f:
+with open('../trash/tasks_json.json', 'r', encoding='utf-8') as f:
     import_data = json.loads(f.read())
     # import_data = json.load(f)
     print(type(import_data), import_data)
@@ -87,11 +87,11 @@ data: dict = {
     2: ('i am smth', b'binary data'),
     3: {None, True, False}
 }
-with open('trash/tasks.pickle', 'wb') as f:
+with open('../trash/tasks.pickle', 'wb') as f:
     # pickle.dump(data, f)
     data_pickle = pickle.dumps(data)
     f.write(data_pickle)
-with open('trash/tasks.pickle', 'rb') as f:
+with open('../trash/tasks.pickle', 'rb') as f:
     # print(pickle.load(f, encoding='utf-8'))
     import_data = pickle.loads(f.read())
     print(import_data)
@@ -101,30 +101,30 @@ from time import perf_counter
 nums = [random.random() * 10 ** 6 for _ in range(10 ** 6)]
 start = perf_counter()
 
-with open('trash/random.json', 'w', encoding='utf-8') as fw:
+with open('../trash/random.json', 'w', encoding='utf-8') as fw:
     json.dump(nums, fw)
 
 print('json saved', perf_counter() - start)
 start = perf_counter()
-with open('trash/random.pickle', 'wb') as fw:
+with open('../trash/random.pickle', 'wb') as fw:
     pickle.dump(nums, fw)
 
 print('pickle saved', perf_counter() - start)
 
 start = perf_counter()
 
-with open('trash/random.json', 'r', encoding='utf-8') as fw:
+with open('../trash/random.json', 'r', encoding='utf-8') as fw:
     json.load(fw)
 
 print('json saved', perf_counter() - start)
 start = perf_counter()
-with open('trash/random.pickle', 'rb') as fw:
+with open('../trash/random.pickle', 'rb') as fw:
     pickle.load(fw)
 
 print('pickle saved', perf_counter() - start)
 
 chunk_size = 256
-with open('trash/random.json', 'r') as fr:
+with open('../trash/random.json', 'r') as fr:
     str_data = []
     while True:
         chunk = fr.read(chunk_size)
@@ -134,7 +134,7 @@ with open('trash/random.json', 'r') as fr:
     nums_j = json.loads(''.join(str_data))
 print(f'{type(nums_j)},{len(nums_j)}')
 
-with open('trash/random.pickle', 'rb') as fr:
+with open('../trash/random.pickle', 'rb') as fr:
     binary_data = bytearray()
     while True:
         chunk = fr.read(chunk_size)
