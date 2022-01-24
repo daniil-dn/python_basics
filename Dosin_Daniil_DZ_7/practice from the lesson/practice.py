@@ -60,8 +60,8 @@ def show_stat(f_path):
     print(f"{f_path}: perm - {oct(stat.st_mode)}, modify {stat.st_mtime:.0f}, access {stat.st_atime:.0f}")
 
 
-path_summary_file_2 = os.path.join(BASE_DIR, 'trash/summery_clone.txt')
-path_summary_file_3 = os.path.join(BASE_DIR, 'trash/summery_clone_2.txt')
+path_summary_file_2 = os.path.join(BASE_DIR, '../trash/summery_clone.txt')
+path_summary_file_3 = os.path.join(BASE_DIR, '../trash/summery_clone_2.txt')
 
 show_stat(path_summary_file)
 show_stat(shutil.copyfile(path_summary_file, path_summary_file_2))
