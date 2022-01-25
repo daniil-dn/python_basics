@@ -1,5 +1,10 @@
 import os
 
+"""
+Хранение конфигурации я сделаю в task_2.py
+
+"""
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
