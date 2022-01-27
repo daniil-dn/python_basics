@@ -1,11 +1,11 @@
 import os
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 """
 Хранение конфигурации я сделаю в task_2.py
 
 """
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 def create_new_dir(name: str, path: str = '') -> str:
