@@ -1,6 +1,9 @@
 import os
+import shutil
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+
+
 #
 # my_project_dir_path = os.path.join(BASE_DIR, 'my_project')
 # if not os.path.exists(my_project_dir_path):
@@ -40,3 +43,28 @@ BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 #                                 sub_folder_path = os.path.join(sub_folder_path, s_s)
 #                                 if not os.path.exists(sub_folder_path):
 #                                     os.mkdir(sub_folder_path)
+
+def collect_folders(path_to_find: str, name_to_find: str):
+    """
+    collects all folders "name" to the one folder "name" in root path
+    :param path_to_find: path in what folder find files and directories
+    :param name_to_find:  directory to find
+    :return:
+    """
+    list_sub_path = []
+    for root, dirs, name in os.walk(path_to_find):
+        if (os.path.basename(root)) == name_to_find:
+            list_sub_path.append(root)
+
+    finish_dir_name = os.path.join(path_to_find, name_to_find)
+    if not os.path.exists(finish_dir_name):
+        os.mkdir(finish_dir_name)
+
+    for sub in list_sub_path:
+        try:
+            shutil.copytree(sub, finish_dir_name, dirs_exist_ok=True)
+        except Exception as err:
+            print("".join(err.args[0]))
+
+
+collect_folders(os.path.join(BASE_DIR, 'my_project'), 'templates')
