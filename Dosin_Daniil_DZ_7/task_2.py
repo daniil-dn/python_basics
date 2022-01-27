@@ -30,10 +30,10 @@ def starter_from_template(path_file_yaml: str, path_where: str) -> bool:
             lines_list.append((line_to_find_lvl, line_lvl))
 
     i = 0
-    while i < len(lines_list):
-        if
-            continue
-        i += 1
+    # while i < len(lines_list):
+    #     if
+    #         continue
+    #     i += 1
 
     print(folders_list[0])
 
