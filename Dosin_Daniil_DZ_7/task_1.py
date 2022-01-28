@@ -3,27 +3,36 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 """
-Хранение конфигурации я сделаю в task_2.py
+
 
 """
+folders_pattern = {
+    'my_project': [
+        {
+            'settings': [],
+            'mainapp': [],
+            'adminapp': [],
+            'authapp': [],
+        }
+    ]
+}
 
 
-def create_new_dir(name: str, path: str = '') -> str:
+def create_from_pattern(path: str, pattern: dict):
     """
-    create a new directory in path and check existing
-    :param name: name of a new directory
+    create directories with the pattern: dict
+
     :param path: path for the new directory
-    :return: path for the new directory
+    :param pattern: structure for creating
+    :return:
     """
-    if not os.path.exists(os.path.join(path, name)):
-        os.mkdir(os.path.join(path, name))
-        return os.path.join(path, name)
-    else:
-        return os.path.join(path, name)
+    for fn, fc in pattern.items():
+        folder_path = os.path.join(path, fn)
+        if not os.path.exists(folder_path):
+            os.mkdir(folder_path)
+        if len(fc) > 0:
+            for node in fc:
+                create_from_pattern(folder_path, node)
 
 
-path_new = create_new_dir('my_project', BASE_DIR)
-create_new_dir('settings', path_new)
-create_new_dir('mainapp', path_new)
-create_new_dir('adminapp', path_new)
-create_new_dir('authapp', path_new)
+create_from_pattern(BASE_DIR, folders_pattern)
