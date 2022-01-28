@@ -7,12 +7,12 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 """
 folders_pattern = {
-    'my_project': [
+    "my_project": [
         {
-            'settings': [],
-            'mainapp': [],
-            'adminapp': [],
-            'authapp': [],
+            "settings": [],
+            "mainapp": [],
+            "adminapp": [],
+            "authapp": [],
         }
     ]
 }
