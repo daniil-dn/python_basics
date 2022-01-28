@@ -5,6 +5,13 @@ from task_1 import BASE_DIR
 # line_yaml_parser
 
 def starter_from_template(path_file_yaml: str, path_where: str) -> bool:
+    """
+    Образовалась проблема с парсером. не могу понять
+    как сделать проход по моему листу всех папок + уровени
+    :param path_file_yaml:
+    :param path_where:
+    :return: True | False
+    """
     with open(path_file_yaml, 'r', encoding='utf-8') as fr:
         line = True
         folders_list = list()

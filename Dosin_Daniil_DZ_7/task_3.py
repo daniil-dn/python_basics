@@ -4,7 +4,8 @@ import shutil
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
 
-#
+#Пока не получилось написать парсер. Сделал вот такую штуку - недопарсер(((
+
 # my_project_dir_path = os.path.join(BASE_DIR, 'my_project')
 # if not os.path.exists(my_project_dir_path):
 #     os.mkdir(os.path.join(BASE_DIR, 'my_project'))

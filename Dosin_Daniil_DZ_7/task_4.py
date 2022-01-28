@@ -4,6 +4,14 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 def stat_size(path_to_stat: str) -> dict:
+    """
+    выводит статистику для заданной папки в виде словаря,
+    в котором ключи — верхняя граница размера файла (пусть будет кратна 10),
+    а значения — общее количество файлов
+
+    :param path_to_stat: where to find all files to stat
+    :return: dict with statistics of file sizes
+    """
     res_dict: dict = {
         100: 0,
         1000: 0,
