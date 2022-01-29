@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7ab9b38-7329-414b-8525-c71455cf4aa5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/practice/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/task_1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/08_description_tasks.md" beforeDir="false" afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/practice/08_description_tasks.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/code_8.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/practice/code_8.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/practice/08_description_tasks.md" beforeDir="false" afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/08_description_tasks.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/task_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/task_1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,10 +43,11 @@
       <recent name="$PROJECT_DIR$/Dosin_Daniil_DZ_8/practice" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Dosin_Daniil_DZ_8" />
       <recent name="$PROJECT_DIR$/Dosin_Daniil_DZ_8/practice" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.task_1">
+  <component name="RunManager" selected="Python.task_3">
     <configuration name="code_8" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_basics" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -112,6 +111,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="task_3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python_basics" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Dosin_Daniil_DZ_8" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Dosin_Daniil_DZ_8/task_3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_basics" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -135,6 +155,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.task_3" />
         <item itemvalue="Python.task_1" />
         <item itemvalue="Python.code_8" />
         <item itemvalue="Python.test" />
