@@ -27,4 +27,4 @@ def calc_cube(x) -> int:
     return x ** 3
 
 
-print(calc_cube(4, 3, 3, k=2))
+print(*calc_cube(4, 3, 3, k=2))
