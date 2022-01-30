@@ -54,7 +54,7 @@
       <recent name="$PROJECT_DIR$/Dosin_Daniil_DZ_8/practice" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.my_decorator">
+  <component name="RunManager" selected="Python.task_3">
     <configuration name="code_8" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python_basics" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -182,8 +182,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.code_8" />
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.code_8" />
       <item itemvalue="Python.my_decorator" />
       <item itemvalue="Python.task_1" />
       <item itemvalue="Python.task_3" />
@@ -191,9 +191,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.task_3" />
         <item itemvalue="Python.my_decorator" />
         <item itemvalue="Python.task_4" />
-        <item itemvalue="Python.task_3" />
         <item itemvalue="Python.task_1" />
         <item itemvalue="Python.code_8" />
       </list>

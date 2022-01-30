@@ -6,13 +6,12 @@ def type_logger(func):
     def wrapper(*args, **kwargs):
         result = []
         for i in args:
-            print(f"{func.__name__}({i}: type {type(i)})")
+
             if type(i) is int:
-                result.append(func(i))
+                result.append((f"{func.__name__}({func(i)}: type {type(i)})"))
         for k, v in kwargs.items():
-            print(f"{func.__name__}({k}: {v} with type {type(i)})")
             if type(v) is int:
-                result.append(func(v))
+                result.append((f"{func.__name__}({func(v)}: type {type(i)})"))
         return result
 
     return wrapper
