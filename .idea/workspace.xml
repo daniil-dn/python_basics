@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7ab9b38-7329-414b-8525-c71455cf4aa5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/my_decorator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/my_decorator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/task_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/task_3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,6 +181,14 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.code_8" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.my_decorator" />
+      <item itemvalue="Python.task_1" />
+      <item itemvalue="Python.task_3" />
+      <item itemvalue="Python.task_4" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.my_decorator" />
