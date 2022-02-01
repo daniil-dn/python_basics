@@ -2,8 +2,8 @@ class Worker:
 
     def __init__(self, name: str, surname: str, position: str, income: dict):
         self.name = name
-        self.surname = surname
-        self.position = position
+        self.surname = surname.capitalize()
+        self.position = position.capitalize()
         self._income = income  # {"wage": wage, "bonus": bonus}
 
 
