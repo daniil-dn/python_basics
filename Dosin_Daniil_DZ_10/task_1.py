@@ -22,7 +22,7 @@ class Matrix:
                 sum_for_lvl.append(i1 + i2)
             new_matrix.append(sum_for_lvl)
             i += 1
-        print(new_matrix)
+        # print(new_matrix)
         return Matrix(new_matrix)
     def __getitem__(self, item):
         return self.matrix[item]
