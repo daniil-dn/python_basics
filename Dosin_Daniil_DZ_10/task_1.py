@@ -16,7 +16,7 @@ class Matrix:
         i = 0
         new_matrix = []
         while i < len(self.matrix):
-            elements_on_lvl = itertools.zip_longest(self.matrix[i], other.matrix[i])
+            elements_on_lvl = itertools.zip_longest(self[i], other[i])
             sum_for_lvl = []
             for (i1, i2) in elements_on_lvl:
                 sum_for_lvl.append(i1 + i2)
@@ -24,6 +24,8 @@ class Matrix:
             i += 1
         print(new_matrix)
         return Matrix(new_matrix)
+    def __getitem__(self, item):
+        return self.matrix[item]
 
     @property
     def __matrix_to_string(self):
