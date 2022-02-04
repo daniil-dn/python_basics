@@ -25,6 +25,8 @@ class Cell:
         sub = self.cells - other.cells
         if sub > 0:
             return Cell(sub)
+        else:
+            raise ValueError('недопустимая операция')
 
     @_is_cells_validator
     def __mul__(self, other):
@@ -78,13 +80,13 @@ if __name__ == '__main__':
     ******
     """
     mul_cell = cell_2 * cell_3
-    # print(mul_cell.cells)  # 30
+    print(mul_cell.cells)  # 30
 
     floordiv_cell = cell_2 // cell_3
-    # print(floordiv_cell.cells)  # 3
+    print(floordiv_cell.cells)  # 3
 
     truediv_cell = cell_1 / cell_2
-    # print(truediv_cell.cells)  # 1
+    print(truediv_cell.cells)  # 1
 
     try:
         cell_3 - cell_2
