@@ -182,8 +182,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.main" />
       <item itemvalue="Python.code_8" />
+      <item itemvalue="Python.main" />
       <item itemvalue="Python.my_decorator" />
       <item itemvalue="Python.task_1" />
       <item itemvalue="Python.task_3" />
