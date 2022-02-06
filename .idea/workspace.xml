@@ -4,9 +4,73 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7ab9b38-7329-414b-8525-c71455cf4aa5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/task_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/task_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/task_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/task_4.py" afterDir="false" />
+    <list default="true" id="981e7eaf-876b-4f03-90e3-07c9354a5c37" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/python_basics.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_1/task_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_1/task_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_1/task_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_2/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_2/task_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_2/task_2_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_2/task_4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_2/task_5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_3/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_3/task_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_3/task_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_3/task_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_3/task_4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_3/task_5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_4/task_4_1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_4/task_4_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_4/task_4_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_4/task_4_4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_4/task_4_5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_4/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_5/task1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_5/task2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_5/task3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_5/task4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_5/task5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_6/06_description_tasks.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_6/hobby.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_6/nginx_logs.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_6/practice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_6/task1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_6/task2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_6/task3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_6/task4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_6/task5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_6/task6-7/add_sale.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_6/task6-7/bakery.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_6/task6-7/change_sale.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_6/task6-7/show_sales.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_6/users.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/08_description_tasks.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/my_decorator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/practice/code_8.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/practice/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/practice/trash/json_saver.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/practice/trash/pickle_saver.pickle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/task_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/task_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_8/task_4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_9/09_description_tasks.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_9/task_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_9/task_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_9/task_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_9/task_4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dosin_Daniil_DZ_9/task_5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,8 +246,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.main" />
       <item itemvalue="Python.code_8" />
+      <item itemvalue="Python.main" />
       <item itemvalue="Python.my_decorator" />
       <item itemvalue="Python.task_1" />
       <item itemvalue="Python.task_3" />
