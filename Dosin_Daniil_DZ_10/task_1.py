@@ -18,12 +18,12 @@ class Matrix:
         while i < len(self.matrix):
             elements_on_lvl = itertools.zip_longest(self[i], other[i])
             sum_for_lvl = []
-            for (i1, i2) in elements_on_lvl:
+            for i1, i2 in elements_on_lvl:
                 sum_for_lvl.append(i1 + i2)
             new_matrix.append(sum_for_lvl)
             i += 1
-        # print(new_matrix)
         return Matrix(new_matrix)
+
     def __getitem__(self, item):
         return self.matrix[item]
 
