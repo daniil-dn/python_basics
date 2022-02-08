@@ -12,13 +12,17 @@ class Date:
         """
         Извлекает дату из строки вида "dd-mm-yy" и привод его в словарь вида {day: "dd", month: "mm", year: "yy"}
 
+        Если одни из элементов даты строка - обрабатывает ValueError и возвращает (None, error)
+
+        valid_cb - callback, дополнительная проверка даты, если не проходит валидацию только возвращает (None, 'Not valid date')
+
         """
 
         if valid_cb is not None and type(valid_cb) is types.FunctionType:
             validation = valid_cb(date_str)
             print(f"date validation is {validation}")
             if validation is False:
-                return (None, "Not valid")
+                return (None, "Not valid date")
 
         template_date = ('day', 'month', 'year')
         ls_date = date_str.split('-')
@@ -59,7 +63,8 @@ print(Date.date_to_int('11-12-2002-32', Date.is_valid_date))
 print()
 print(Date.date_to_int('11-12-2002-3'))
 
+
+print(Date.is_valid_date('11-12-dd-7'))
 print()
-print(Date.is_valid_date('11-12-2002'))
 
 print(Date.date_to_int('11-12-dddd'))
