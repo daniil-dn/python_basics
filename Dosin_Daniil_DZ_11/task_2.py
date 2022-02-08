@@ -10,6 +10,14 @@ class ZeroDivError(ArithmeticError):
 
 
 def int_division(ls: List[str]) -> int:
+    """
+    Программа деления целых чисел
+    Raise ZeroDivError, если второй элемент аргумента == 0
+    Raise TypeError, если элементы аргумента - не int
+
+    ls: list[str]
+    return: int
+    """
     if ls[1].isdigit() and int(ls[1]) == 0:
         raise ZeroDivError('Нельзя делить на ноль')
     elif ls[0].isdigit() and ls[1].isdigit():
@@ -36,4 +44,3 @@ if __name__ == "__main__":
             continue
         else:
             break
-
