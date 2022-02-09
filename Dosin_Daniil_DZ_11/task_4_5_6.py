@@ -7,11 +7,16 @@ class Warehouse:
 
     def __init__(self, title='default', listing: list = None):
         self.list_equipment = []
+        self.dict_equpment = {}
         self.title = title
         if listing is not None:
             for item in listing:
                 item._add_warehouse(self)
                 self.list_equipment.append(item)
+                if not self.dict_equpment.get(item.__class__.__name__, 0):
+                    self.dict_equpment.setdefault(item.__class__.__name__, 1)
+                else:
+                    self.dict_equpment[item.__class__.__name__] += 1
 
     @property
     def title(self):
@@ -23,11 +28,31 @@ class Warehouse:
 
     def add_equipment(self, *things):
         for item in things:
-            if not self.check_equipment(item):
+            if self.check_equipment_year(item):
                 item._add_warehouse(self)
                 self.list_equipment.append(item)
+                if not self.dict_equpment.get(item.__class__.__name__, 0):
+                    self.dict_equpment.setdefault(item.__class__.__name__, 1)
+                else:
+                    self.dict_equpment[item.__class__.__name__] += 1
             else:
                 print("This Office Equipment is very old for this warehouse")
+
+    def remove_equipment(self, *things):
+        for item in things:
+            if item in self.list_equipment:
+                item._remove_warehouse(self)
+                self.list_equipment.remove(item)
+            else:
+                print("Данного оборудования нет на складе")
+                continue
+            # если элемента нет в словаре или количество элементов 0, то мы пропускаем этот цикл
+            if not self.dict_equpment.get(item.__class__.__name__, 0) and self.dict_equpment.get(
+                    item.__class__.__name__) == 0:
+                self.dict_equpment.setdefault(item.__class__.__name__, 0)
+                continue
+            else:
+                self.dict_equpment[item.__class__.__name__] -= 1
 
     def print_storing_equipments(self):
         for item in self.list_equipment:
@@ -36,12 +61,15 @@ class Warehouse:
     def clean_warehouse(self):
         for item in self.list_equipment:
             item._remove_warehouse(self)
-            self.list_equipment.remove(item)
+        self.dict_equpment = {}
+        self.list_equipment = []
 
     @staticmethod
-    def check_equipment(equipment_to_check) -> bool:
+    def check_equipment_year(equipment_to_check) -> bool:
         if equipment_to_check.year < 2000:
             return False
+        else:
+            return True
 
     def __add__(self, other):
         if type(other) is Warehouse:
@@ -109,26 +137,26 @@ class Copier(OfficeEquipment):
 
 
 printer = Printer('printer2000')
-printer.print('smth')
+
 xerox = Copier('xerox - dc30')
-xerox.copy('smth')
+
 scanner = Scanner('super scanner 88')
-scanner.scan('this page')
 
 warehouse1 = Warehouse()
-print(warehouse1.title)
 warehouse1.add_equipment(printer)
 warehouse1.add_equipment(xerox)
 warehouse1.add_equipment(scanner)
-warehouse1.print_storing_equipments()
 printer2 = Printer('printer234234')
 xerox2 = Copier('xerox 2342- dc30')
 scanner2 = Scanner('super2423 sca234234nner 88')
 warehouse2 = Warehouse('warehouse2')
 warehouse2.add_equipment(printer2, scanner2, xerox2)
-warehouse2.print_storing_equipments()
+
 
 new_warehouse = warehouse1 + warehouse2
-
-new_warehouse.print_storing_equipments()
-print(new_warehouse.title)
+new_warehouse.remove_equipment(printer2)
+new_warehouse.remove_equipment(printer)
+new_warehouse.remove_equipment(printer)
+print(new_warehouse.dict_equpment)
+print(warehouse1.dict_equpment)
+print(warehouse2.dict_equpment)
